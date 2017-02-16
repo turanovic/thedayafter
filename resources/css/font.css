@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Material";
+    src: url(../../assets/font/material.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../../assets/font/Roboto.ttf) format("TrueType");
+}
