@@ -1,4 +1,14 @@
 <?php
+if (!file_exists('localInfo.php')) {
+    DEFINE("DBN", "TheDayAfterDB");
+    DEFINE("SRV", "localhost");
+    DEFINE("USR", "website");
+    DEFINE("PSW", "dls2KXETD9HcZFYSryCv");
+}
+else {
+    include_once('localInfo.php');
+}
+
 if(isset($_POST["stage"])) {
     switch($_POST["stage"]) {
         default:
@@ -36,10 +46,10 @@ function validateInput($input) {
 }
 
 function fill_BI($input) {
-    $databasename = "TheDayAfterDB";
-    $servername = "localhost";
-    $username = "website";
-    $password = "dls2KXETD9HcZFYSryCv";
+    $databasename = DBN;
+    $servername = SRV;
+    $username = USR;
+    $password = PSW;
     
     try {
         $connectionString = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
@@ -91,10 +101,11 @@ function createHash($id) {
 
 
 function getUserByHash($input) {
-    $databasename = "TheDayAfterDB";
-    $servername = "localhost";
-    $username = "website";
-    $password = "dls2KXETD9HcZFYSryCv";
+    $databasename = DBN;
+    $servername = SRV;
+    $username = USR;
+    $password = PSW;
+
     try {
         $connectionString = new PDO("mysql:host=$servername;dbname=$databasename", $username, $password);
         $connectionString->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
