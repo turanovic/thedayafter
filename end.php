@@ -26,7 +26,7 @@ session_destroy();
     </head>
     <body>
 	<?php
-    include 'include/banner.php';    
+    include 'resources/php/banner.php';
     ?>
         <div class="container-fluid">
              <div class="row">
