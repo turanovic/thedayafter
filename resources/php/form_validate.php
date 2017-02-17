@@ -4,6 +4,7 @@ if (!file_exists('localInfo.php')) {
     DEFINE("SRV", "localhost");
     DEFINE("USR", "website");
     DEFINE("PSW", "dls2KXETD9HcZFYSryCv");
+
 }
 else {
     include_once('localInfo.php');
